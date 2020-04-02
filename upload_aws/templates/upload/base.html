@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>        
+        <title>Django Upload</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    	<link rel="stylesheet" media="screen" href="{% static 'upload/css/bootstrap.min.css' %}">
+    	<link rel="stylesheet" media="screen" href="{% static 'upload/css/bootstrap.superhero.min.css' %}">
+    </head>
+    <body>
+    	{% include "upload/header.html" %}
+
+        {% block content %}
+        
+        {% endblock content %}
+
+        
+        {% block scripts %}
+
+        {% endblock scripts %}
+
+        <script type="text/javascript" src="{% static 'upload/js/jquery-1.12.3.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'upload/js/bootstrap.min.js' %}"></script>        
+    </body>
+</html>

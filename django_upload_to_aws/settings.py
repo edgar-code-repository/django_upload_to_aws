@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'upload_aws'
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,11 @@ WSGI_APPLICATION = 'django_upload_to_aws.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'upload_db',                      
+        'USER': 'postgres',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
     }
 }
 
